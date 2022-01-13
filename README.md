@@ -11,7 +11,7 @@ Github repository that will hold at the training material for Ethan's Java cohor
   > The Monday quizes serve as a review for all of the material covered in the week prior.
 
 - 1 hour lunch breaks are scheduled as follows:
-  - **Monday - Friday**: 12pm - 1pm ECST
+  - **Monday - Friday**: 12pm - 1pm CST
 
 | Time EST | Monday           | Tuesday | Wednesday | Thursday | Friday     |
 | :------- | ---------------- | ------- | --------- | -------- | ---------- |
