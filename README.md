@@ -23,7 +23,7 @@ Github repository that will hold at the training material for Ethan's Java cohor
 | 2:00     | :speech_balloon: | :mag:   | :mag:     | :mag:    | :mag:      |
 | 3:00     | :speech_balloon: | :mag:   | :mag:     | :mag:    | :mag:      |
 | 4:00     | :speech_balloon: | :mag:   | :mag:     | :mag:    | :mag:      |
-| 5:00     | :speedh_balloon: | :mag:   | :mag:     | :mag:    | :mag:      |
+| 5:00     | :speech_balloon: | :mag:   | :mag:     | :mag:    | :mag:      |
 -----------------------------------------------------------------------------
 :pizza: = Lunch <br>
 :pencil2: = Quiz <br>
