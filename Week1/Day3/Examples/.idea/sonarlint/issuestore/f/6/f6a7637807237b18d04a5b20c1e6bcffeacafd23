@@ -1,0 +1,39 @@
+
+]
+java:S1854¢"ARemove this useless assignment to local variable "mapCollection".(à÷ı±üÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(şÇøêøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(şÇøêøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(™‘Ôøÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(üù”‡şÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÙŒûøÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(¬ùùŠûÿÿÿÿ
+P	java:S125!"<This block of commented-out lines of code should be removed.(œ”ƒE
+E
+java:S1197%"*Move the array designators [] to the type.(à™âùÿÿÿÿ
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(¢êÃıÿÿÿÿ
+S	java:S106?"9Replace this use of System.out or System.err by a logger.(œ¬ï£ùÿÿÿÿ
+N	java:S106N"9Replace this use of System.out or System.err by a logger.(µİ
+S	java:S106P"9Replace this use of System.out or System.err by a logger.(Ë½¹Áşÿÿÿÿ
+S	java:S106^"9Replace this use of System.out or System.err by a logger.(ÓÙ©øÿÿÿÿ
+S	java:S106a"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
+N	java:S106o"9Replace this use of System.out or System.err by a logger.(–ÓÈÌ
+N	java:S106p"9Replace this use of System.out or System.err by a logger.(Ô‘şä
+N	java:S106t"9Replace this use of System.out or System.err by a logger.(Ô‘şä
+N	java:S106x"9Replace this use of System.out or System.err by a logger.(Ô‘şä
+N	java:S106|"9Replace this use of System.out or System.err by a logger.(Ô‘şä
+O	java:S106€"9Replace this use of System.out or System.err by a logger.(®‰Ó
+O	java:S106„"9Replace this use of System.out or System.err by a logger.(ì×êà
+O	java:S106…"9Replace this use of System.out or System.err by a logger.(Ô‘şä
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(§”·½úÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(öÆ¿„
+N
+java:S1481¢"2Remove this unused "mapCollection" local variable.(à÷ı±üÿÿÿÿ
+T	java:S106¥"9Replace this use of System.out or System.err by a logger.(¨´ĞÛıÿÿÿÿ
+O	java:S106°"9Replace this use of System.out or System.err by a logger.(®İÀû
+[	java:S106¼"9Replace this use of System.out or System.err by a logger.(Ä˜ùÿùÿÿÿÿ8«—ÍÈç/
+N
+java:S1128"3Remove this unused import 'javax.swing.text.Style'.(¤¦Ëıÿÿÿÿ
+b
+java:S1192("GDefine a constant instead of duplicating this literal "Summer" 3 times.(®¹¼Åıÿÿÿÿ

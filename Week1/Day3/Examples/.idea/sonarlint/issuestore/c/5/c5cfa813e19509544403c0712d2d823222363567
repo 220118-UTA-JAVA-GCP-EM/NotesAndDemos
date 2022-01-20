@@ -1,0 +1,20 @@
+
+[	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(¡ ß¨
+`	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(ÿˆ‹±ıÿÿÿÿ
+E
+java:S1197	"*Move the array designators [] to the type.(ùï¾ÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ª¡İŒüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ª¡İŒüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ª¡İŒüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ñÌÑˆúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ª¡İŒüÿÿÿÿ
+M	java:S106$"9Replace this use of System.out or System.err by a logger.(™‹ó
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(ëÔ†úÿÿÿÿ
+T	java:S106("9Replace this use of System.out or System.err by a logger.(àÇ´o8ë«ûÃç/
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(Œ†÷²8ì«ûÃç/
+?
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å
+b
+java:S1192"GDefine a constant instead of duplicating this literal "gear: " 4 times.(ª¡İŒüÿÿÿÿ
+e
+java:S1192"JDefine a constant instead of duplicating this literal ", speed: " 4 times.(ª¡İŒüÿÿÿÿ

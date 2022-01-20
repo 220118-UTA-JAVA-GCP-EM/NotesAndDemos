@@ -1,0 +1,11 @@
+
+d	java:S116"ORename this field "SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìùç
+7
+java:S1170"!Make this final field static too.(ìùç
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¢âíúÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(•æõ¹şÿÿÿÿ
+t
+java:S2142 "^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+}
+java:S1319
+"gThe type of "buffer" should be an interface such as "List" rather than the implementation "LinkedList".(ˆÃ½
