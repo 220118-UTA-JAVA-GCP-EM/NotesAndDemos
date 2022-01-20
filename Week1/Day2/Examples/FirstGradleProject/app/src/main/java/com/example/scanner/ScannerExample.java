@@ -33,20 +33,49 @@ public class ScannerExample {
             //But we will use the switch statement to switch between the input types
             switch(op){
                 case "+":
-                    System.out.println("Adding");
+                    System.out.println("You chose addition");
+                    System.out.println("Input the first operand");
+                    Integer first = Integer.parseInt(input.nextLine());
+                    System.out.println("Input the second operand");
+                    Integer second = Integer.parseInt(input.nextLine());
+                    System.out.println("Your output is: " + calc.addition(first, second));
                     break;
                 case "-":
                     System.out.println("Subtracting");
+                    System.out.println("Input the first operand");
+                    first = Integer.parseInt(input.nextLine());
+                    System.out.println("Input the second operand");
+                    second = Integer.parseInt(input.nextLine());
+                    System.out.println("Your output is: " + calc.subtraction(first, second));
                     break;
                 case "*":
                     System.out.println("Multiplying");
+                    System.out.println("Input the first operand");
+                    Double firstD = Double.parseDouble(input.nextLine());
+                    System.out.println("Input the second operand");
+                    Double secondD = Double.parseDouble(input.nextLine());
+                    System.out.println("Your output is: " + calc.multiplication(firstD, secondD));
                     break;
                 case "/":
                     System.out.println("Dividing");
+                    System.out.println("Multiplying");
+                    System.out.println("Input the first operand");
+                    firstD = Double.parseDouble(input.nextLine());
+                    System.out.println("Input the second operand");
+                    secondD = Double.parseDouble(input.nextLine());
+                    System.out.println("Your output is: " + calc.division(firstD, secondD));
                     break;
             }
 
+            //After calculcating the output, we can ask if they want to continue y/n, if yest
+            //We will continue the loop, otherwise we will break out of the loop
+            System.out.println("Are you done calculating?");
+            String fin = input.nextLine();
+
+            done = fin.equals("y") ? true : false;
         }
+
+        System.out.println("Thank you for using our calculator. Goodbye :)");
 
     }
 
