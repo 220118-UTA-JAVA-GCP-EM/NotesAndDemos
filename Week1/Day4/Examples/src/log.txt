@@ -1,0 +1,9 @@
+2022-01-21 13:17:23 TRACE Log4JDriver:12 - trace message - very fine grained
+2022-01-21 13:17:23 DEBUG Log4JDriver:13 - this statement is useful for debugging the application
+2022-01-21 13:17:23 INFO  Log4JDriver:14 - informational message use this level of logging
+2022-01-21 13:17:23 WARN  Log4JDriver:15 - something bad potentially could/did happen
+2022-01-21 13:17:23 ERROR Log4JDriver:16 - something went wrong
+2022-01-21 13:17:23 FATAL Log4JDriver:17 - something very bad happened
+2022-01-21 13:18:31 WARN  Log4JDriver:15 - something bad potentially could/did happen
+2022-01-21 13:18:31 ERROR Log4JDriver:16 - something went wrong
+2022-01-21 13:18:31 FATAL Log4JDriver:17 - something very bad happened
