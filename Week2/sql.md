@@ -9,7 +9,7 @@ What is a database?
 
 Every table will have a primary key:
 
--   A unqiue identifier for each entry in the database
+-   A unique identifier for each entry in the database
 -   Each row will have only one primary key, but a primary key can consist of multiple columns (composite key)
 
 ## DBMS and RDBMS
@@ -44,18 +44,18 @@ There are many different RDBMS vendors / flavors of SQL, these include:
 
 We will be focusing on PostgreSQL during training
 
-# Datatypes
+# Data Types
 
-Tables in our databases have attributes that describe the data stored in the row, these attributes can be of many different datatypes. Here is a list of common datatypes, and a link to the official documentation with all of the datatypes:
+Tables in our databases have attributes that describe the data stored in the row, these attributes can be of many different data types. Here is a list of common data types, and a link to the official documentation with all of the data types:
 
--   boolean (bool): evaulates to true or false
--   chararacter (`char[n]`) : a fixed length character string
+-   boolean (bool): evaluates to true or false
+-   character (`char[n]`) : a fixed length character string
 -   character varying (`varchar[n]`) : a varying length string of characters
 -   date : a calendar date
 -   integer (int): a whole number
 -   numeric/decimal: a decimal number
 
-PostgreSQL documenation on datatypes:
+PostgreSQL documentation on data types:
 
 https://www.postgresql.org/docs/9.5/datatype.html
 
@@ -67,7 +67,7 @@ A database schema refers to the formal structure of data defined by a relational
 
 Schemas enforce constraints when defining tables, so we can visualize them through Entity Relationship Diagrams
 
-An Entity Relationship Diagram illistrates how different tables in a database relate to one another
+An Entity Relationship Diagram illustrates how different tables in a database relate to one another
 
 They contain three main components:
 
@@ -92,7 +92,7 @@ Foreign Keys:
 -   Do not need to be unique, but can be
 -   Can be made up of one or more columns
 
-There are four types of mutliplicity in relational databases
+There are four types of multiplicity in relational databases
 
 1. One-to-many: one entry in the first table can be mapped to many entries in the second table
     - The foreign key in the first is allowed to map to multiple entries in the second table
@@ -102,7 +102,7 @@ There are four types of mutliplicity in relational databases
 4. One-to-one: a single entry in the first table is mapped to a single entry in the second table
     - The foreign key of both tables must be unique
 
-## Referntial Intregrity
+## Referential Intregrity
 
 -   A foreign key is the reference to the relationship in multiplicity, and the rule ensures that a referenced record always exists
 -   You are not allowed to delete an entry if an entry of another table depends on it
@@ -127,7 +127,7 @@ There are 4 or 5 sublangauges in SQL depending on who you ask
 ## Data Manipulation Language (DML):
 
 -   Used to change data inside of the database
--   Often refered to as the CRUD operations (Create, Read, Update, Delete)
+-   Often referred to as the CRUD operations (Create, Read, Update, Delete)
     -   This is the theoretical construct of what you should be able to do with data in a table
 -   Syntax/Keywords for the DML:
     -   INSERT : used to add new data into a table
@@ -141,21 +141,21 @@ There are 4 or 5 sublangauges in SQL depending on who you ask
 -   The debate itself is whether it should be its own sublanguage, or a sublanguage of DML
 -   Syntax/Keywords for DQL:
     -   SELECT: used to retrieve data from a table
--   Typically DQL is refering to when we use constraints aka the "WHERE" clause
+-   Typically DQL is referring to when we use constraints aka the "WHERE" clause
 
 ## Data Control Language (DCL)
 
 -   This sublanguage is used to manage the security and control of our database
 -   Syntax/Keywords for DCL:
     -   GRANT: to grant any permissions to a user
-    -   REVOCE: to remove ant permissions from a user
+    -   REVOKE: to remove ant permissions from a user
 
 ## Transaction Control Language (TCL)
 
 -   Used to manage transactions within the database (more on this later)
 -   Syntax/Keywords for TCL:
-    -   COMMIT: this will perminently save any DML operations that occured
-    -   ROLLBACK: this will completely erase any DML operations that occured between two commits. Keep in mind, once you commit changes you cannot rollback
+    -   COMMIT: this will permanently save any DML operations that occurred
+    -   ROLLBACK: this will completely erase any DML operations that occurred between two commits. Keep in mind, once you commit changes you cannot rollback
         -SAVEPOINT: creates a spot to rollback to
 
 # Constraints
@@ -166,7 +166,7 @@ Some constraints in SQL include:
 
 -   Composite keys: a key that uses more than one column
 -   Not null: the column must have data
--   Unqiue: no two records entered into this column can be the same
+-   Unique: no two records entered into this column can be the same
 -   Primary key: denotes that this column is a primary key
 -   Foreign key: denotes that this column is pointing to an attribute on another table
 -   Default: creates a default value if now is given
@@ -203,7 +203,7 @@ Some popular aggregates functions are as follows:
 
 -   MAX(Column): returns the max value of that column
 -   MIN(Column): returns the min value of that column
--   AVG(Column): returnds the average value of that column
+-   AVG(Column): returns the average value of that column
 -   SUM(Column): adds and returns the sum of the values in the column
 -   COUNT(column): returns the number of elements in that column
 
@@ -211,9 +211,9 @@ These function are used in the SELECT clause, and cannot be used with the WHERE 
 
 If more than one column is being selected in the SELECT column section of the query, a GROUP By is required
 
-You can use the HAVING clause with an aggergate function instead of WHERE
+You can use the HAVING clause with an aggregate function instead of WHERE
 
-Scalar functions operatate on a single row, these can be used with SELECT and WHERE
+Scalar functions operate on a single row, these can be used with SELECT and WHERE
 
 Some popular scalar functions are as follows:
 
@@ -248,4 +248,4 @@ Third Normal Form:
 
 A way to remember the three normal forms in order is the saying:
 
-The key (1NF), the whole key (2NF), and nothing but the key (3NF), so help me Codd
+The key (1NF), the whole key (2NF), and nothing but the key (3NF)
