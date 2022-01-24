@@ -31,7 +31,7 @@ SQL: Structured Query Language
 
 -   This is not a programming language
 -   It is the underlying language used to query relational databases
--   English like syntax fir developers to manipulate data
+-   English like syntax for developers to manipulate data
 
 # Database Vendors
 
@@ -115,12 +115,20 @@ There are 4 or 5 sublangauges in SQL depending on who you ask
     -   SELECT: used to retrieve data from a table
 -   Typically DQL is refering to when we use constraints aka the "WHERE" clause
 
-## Data Control Language
+## Data Control Language (DCL)
 
 -   This sublanguage is used to manage the security and control of our database
 -   Syntax/Keywords for DCL:
     -   GRANT: to grant any permissions to a user
     -   REVOCE: to remove ant permissions from a user
+
+## Transaction Control Language (TCL)
+
+-   Used to manage transactions within the database (more on this later)
+-   Syntax/Keywords for TCL:
+    -   COMMIT: this will perminently save any DML operations that occured
+    -   ROLLBACK: this will completely erase any DML operations that occured between two commits. Keep in mind, once you commit changes you cannot rollback
+        -SAVEPOINT: creates a spot to rollback to
 
 # Constraints
 
@@ -144,26 +152,20 @@ Some constraints in SQL include:
 -   GROUP BY : used to group rows by a column and perform an aggregate function on them
 -   HAVING : similar to the WHERE clause, but used in conjunction with an aggregate function
 
-# Sublanguages Demo P1
+## Transactions
 
-## Transaction Control Language
-
--   Used to manage transactions within the database
 -   A transaction is any change that happens to our table
--   Syntax/Keywords for TCL:
-    -   COMMIT: this will perminently save any DML operations that occured
-    -   ROLLBACK: this will completely erase any DML operations that occured between two commits. Keep in mind, once you commit changes you cannot rollback
-        -SAVEPOINT: creates a spot to rollback to
+-   A unit of work performed in our db
 
 In SQL every transaction must have a specific four properties, these are know as the ACID properties
 
-Atomic: All or nothing, the transaction is fully completed, or it doesn't happen at all
+**Atomic:** All or nothing, the transaction is fully completed, or it doesn't happen at all
 
-Consistency: The tables schema will remain intact after the transaction
+**Consistency:** The tables schema will remain intact after the transaction
 
-Isolation: Each transaction cannot affect the results of another transaction
+**Isolation:** Each transaction cannot affect the results of another transaction
 
-Durability: Data will persist through system crashes and other issues
+**Durability:** Data will persist through system crashes and other issues
 
 # Multiplicity in Databases
 
@@ -222,8 +224,6 @@ Some popular scalar functions are as follows:
 -   ABS(num): returns the absolute value of the row
 -   CEILING(num): returns the rounded up number
 -   FLOOR(num): returns the rounded down number
-
-# Sublangauge and Multiplicity Demo
 
 # Normalization
 
