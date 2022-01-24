@@ -80,6 +80,34 @@ Attributes:
 Relationships
 - These are the connections between the tables
 
+# Multiplicity in Databases
+
+Multiplicity is the relationship between entries in different tables
+
+These relationships are defined with foreign key constraints
+
+Foreign Keys:
+
+-   Make relations between tables
+-   Do not need to be unique, but can be
+-   Can be made up of one or more columns
+
+There are four types of mutliplicity in relational databases
+
+1. One-to-many: one entry in the first table can be mapped to many entries in the second table
+    - The foreign key in the first is allowed to map to multiple entries in the second table
+2. Many-to-one: this is the opposite of the above
+3. Many-to-many: Many entries of the first table can be mapped to many entries in the second table
+    - These are implemented with what are called junction tables
+4. One-to-one: a single entry in the first table is mapped to a single entry in the second table
+    - The foreign key of both tables must be unique
+
+## Referntial Intregrity
+
+-   A foreign key is the reference to the relationship in multiplicity, and the rule ensures that a referenced record always exists
+-   You are not allowed to delete an entry if an entry of another table depends on it
+-   You can use cascade on delete, which will delete children and parent entries
+
 # SQL Sublanguages
 
 There are 4 or 5 sublangauges in SQL depending on who you ask
@@ -142,8 +170,6 @@ Some constraints in SQL include:
 -   Primary key: denotes that this column is a primary key
 -   Foreign key: denotes that this column is pointing to an attribute on another table
 -   Default: creates a default value if now is given
--   Serial: the old way to implement an auto generated primary key
--   Indentity: the new way to create a primary key automatically
 
 # Other Notible Keywords
 
@@ -167,34 +193,7 @@ In SQL every transaction must have a specific four properties, these are know as
 
 **Durability:** Data will persist through system crashes and other issues
 
-# Multiplicity in Databases
 
-Multiplicity is the relationship between entries in different tables
-
-These relationships are defined with foreign key constraints
-
-Foreign Keys:
-
--   Make relations between tables
--   Do not need to be unique, but can be
--   Can be made up of one or more columns
--   A foreign key made of multiple columns is called a composite key
-
-There are four types of mutliplicity in relational databases
-
-1. One-to-many: one entry in the first table can be mapped to many entries in the second table
-    - The foreign key in the first is allowed to map to multiple entries in the second table
-2. Many-to-one: this is the opposite of the above
-3. Many-to-many: Many entries of the first table can be mapped to many entries in the second table
-    - These are implemented with what are called junction tables
-4. One-to-one: a single entry in the first table is mapped to a single entry in the second table
-    - The foreign key of both tables must be unique
-
-## Referntial Intregrity
-
--   A foreign key is the reference to the relationship in multiplicity, and the rule ensures that a referenced record always exists
--   You are not allowed to delete an entry if an entry of another table depends on it
--   You can use cascade on delete, which will delete children and parent entries
 
 # Aggregate and Scalar Functions
 
