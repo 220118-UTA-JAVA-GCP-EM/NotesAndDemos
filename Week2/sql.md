@@ -143,6 +143,21 @@ There are 4 or 5 sublangauges in SQL depending on who you ask
     -   SELECT: used to retrieve data from a table
 -   Typically DQL is referring to when we use constraints aka the "WHERE" clause
 
+### Query clauses
+
+select [columns]
+
+from [table]
+
+where [condition] -- filters pre aggregation if aggregation is occurring
+
+group by [column] -- defines how our data is going to be aggregated
+
+having [condition] -- filters after aggregation
+
+order by [column][asc/desc]
+
+
 ## Data Control Language (DCL)
 
 -   This sublanguage is used to manage the security and control of our database
@@ -170,13 +185,6 @@ Some constraints in SQL include:
 -   Primary key: denotes that this column is a primary key
 -   Foreign key: denotes that this column is pointing to an attribute on another table
 -   Default: creates a default value if now is given
-
-# Other Notible Keywords
-
--   WHERE : used to narrow the query results of your SELECT statement
--   ORDER BY : used to sort data returned by a SELECT statement by a specific row
--   GROUP BY : used to group rows by a column and perform an aggregate function on them
--   HAVING : similar to the WHERE clause, but used in conjunction with an aggregate function
 
 ## Transactions
 
@@ -223,6 +231,64 @@ Some popular scalar functions are as follows:
 -   ABS(num): returns the absolute value of the row
 -   CEILING(num): returns the rounded up number
 -   FLOOR(num): returns the rounded down number
+
+
+## Query clauses
+
+select [columns]
+
+from [table]
+
+where [condition] -- filters pre aggregation if aggregation is occurring
+
+group by [column] -- defines how our data is going to be aggregated
+
+having [condition] -- filters after aggregation
+
+order by [column][asc/desc]
+
+
+## Joins
+
+- allows us to create a single query which spans across multiple tables in our db
+- there are various different types of joins, based on what information you would like from each table, and how you define the tables to be joined together
+- the typical join syntax is a follows:
+- inner, left (outer), right (outer), full (outer)
+
+```sql
+select [columns]
+from [left table]
+left/right/full join [right table]
+on [join predicate];
+```
+
+There are various different types of joins, based on what information you would like from each table, and how you define a join predicate. A *theta* join is just a join which joins two tables based on some condition (defined above as the join predicate). An *equi* join, is a theta join, where that condition uses equality. 
+
+```sql 
+select employee.name, department.name
+from employee
+left join department
+on department.id = employee.department;
+```
+
+We also have such joins as *natural* joins. These joins are implicit and do not need a join predicate. Instead, the join is performed based on columns with the same names. In the employee/department example above, if the department table had an id column with the name 'dept_id' and the employee table had a column with the name 'dept_id' which referred to the department table, a natural join could be performed.
+
+```sql 
+select employee.name, department.name
+from employee
+natural join department
+```
+
+## Index
+An index is a common way to enhance database performance, enabling faster retrieval. When creating an index, the database stores an in memory ordering of a particular column. Without an index, if we were searching on a particular column, we would need to check every single value in that column to return the result. Indexes allow those operations to be more efficient. Columns which are searched on frequently, and that have a high percent of unique values and a low percent of null values are generally good candidates for an index. While indexes can make searching operations more efficient, we need to be careful not to use indexes too liberally. Because we are storing an additional ordering in memory, they need to be maintained every time we perform operations like insertions and deletions, so they may not always be the best choice.
+
+## Views
+There are two types of views in Postgres which allow us to view a dataset from a query. A traditional *view* will store a query in memory. Each time we make a request to that view, the query is executed and the result set is retrieved from the database.  There is also such thing as a *materialized view.* This type of view stores the actual dataset in memory. Each time we make a request to a materialized view, it does not execute the query again, but rather returns the saved dataset. To update the dataset, the materialized view must be refreshed.
+
+```sql
+create [materialized] view as [query]
+```
+
 
 # Normalization
 
