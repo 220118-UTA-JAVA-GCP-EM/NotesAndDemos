@@ -171,7 +171,7 @@ order by [column][asc/desc]
 -   Syntax/Keywords for TCL:
     -   COMMIT: this will permanently save any DML operations that occurred
     -   ROLLBACK: this will completely erase any DML operations that occurred between two commits. Keep in mind, once you commit changes you cannot rollback
-        -SAVEPOINT: creates a spot to rollback to
+    -   SAVEPOINT: creates a spot to rollback to
 
 # Constraints
 
