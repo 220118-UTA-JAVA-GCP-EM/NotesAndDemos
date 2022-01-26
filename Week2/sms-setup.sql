@@ -12,7 +12,7 @@ create table course(
 	subject varchar(50),
 	number smallint,
 	name varchar(50),
-	teacher integer references person,
+	teacher integer references person
 )
 
 create table course_topic( 
