@@ -43,7 +43,7 @@ Using the sms data model, write the following SQL queries.
 2. Display student names and their teacher's names side by side based on the courses they're enrolled in.
 
 
-## Self Study Topics
+## 3. Self Study Topics
 Explore the following topics:
 
 #### Transaction Isolation Levels and Read Phenomena
@@ -67,6 +67,6 @@ Be able to follow the following questions:
 - read notes posted on these topics in sql
 
 
-## Project Work
+## 3. Project Work
 
 If you have any additional time, feel free to work on your project 0.
