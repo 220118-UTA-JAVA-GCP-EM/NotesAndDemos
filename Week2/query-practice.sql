@@ -118,3 +118,33 @@ join course c
 on cs.course_id = c.id;
 
 
+-----------------------------
+-- challenge questions
+-----------------------------
+
+-- 1 
+select person.first, person.last, course_student.course_id, course.name
+from person 
+left join course_student 
+on person.id = course_student.student_id
+left join course 
+on course_student.course_id = course.id
+where person.type = 1;
+
+-- 2 
+
+select s."first", s."last", t."first", t."last" 
+from person s
+join course_student cs 
+on s.id = cs.student_id
+join course c 
+on c.id = cs.course_id
+join person t 
+on c.teacher = t.id;
+
+
+
+
+
+
+
