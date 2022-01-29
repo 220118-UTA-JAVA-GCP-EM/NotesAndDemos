@@ -25,7 +25,6 @@
 - What is the difference between a scalar function and an aggregate function?
 - What are some examples of scalar functions?
 - What are some examples of aggregate functions?
-- What are some 
 - What is a join?
 - How would one write a join?
 - What are the different types of joins? When would you use each?
@@ -46,10 +45,18 @@
 - What is denormalization?
 - What criteria must be met to satisfy each of the first three normal forms?
 - What is a web service?
+- Explain client/server communication.
 - What is HTTP?
+- What are the different parts of an HTTP request?
+- What are the different parts of an HTTP response?
+- What are the different status code ranges you can expect from an HTTP response? Some common status codes?
+- What are the different HTTP verbs? What is each used for?
 - What is REST?
+- What does it mean for a web service to be stateless?
+- What are the typical RESTful naming conventions?
 - What is Javalin?
 - How can you expose an API endpoint using Javalin?
+- What is a Javalin Handler?
+- How can we handle errors and exceptions with Javalin?
 - What is JSON?
 - What is Postman?
-- What are websockets?
