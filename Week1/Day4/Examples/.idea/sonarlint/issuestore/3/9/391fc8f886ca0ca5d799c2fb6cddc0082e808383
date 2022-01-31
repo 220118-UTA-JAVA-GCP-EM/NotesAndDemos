@@ -1,0 +1,15 @@
+
+K
+java:S1854"5Remove this useless assignment to local variable "a".(÷ê§Ã
+R
+java:S1854"5Remove this useless assignment to local variable "a".(ï¢ø…8Ò‘µÍÁ/
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ú—ÜÌ
+<
+java:S1481"&Remove this unused "a" local variable.(ï¢ø…
+U	java:S106	"9Replace this use of System.out or System.err by a logger.(¶ØØ§8˜ØµÍÁ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¨°ÖÌ¯ˇˇˇˇ8˜ØµÍÁ/
+q
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ã∞¨ì8πúπÍÁ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ñ˛Ë˜˝ˇˇˇˇ8∫úπÍÁ/
+?
+java:S2189""Add an end condition to this loop.(¥ˇ’ô8¿úπÍÁ/
