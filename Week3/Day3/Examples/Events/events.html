@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Events</title>
+    </head>
+    <body>
+        <h1>Bubble</h1>
+        <div class="bubble">DIV
+            <p class="bubble">P
+                <a class="bubble">CLICK ME</a>
+            </p>
+        </div>
+
+        <h1>Capture</h1>
+        <div class="capture">DIV
+            <p class="capture">P
+                <a class="capture">CLICK ME</a>
+            </p>
+        </div>
+
+        <h1>Welcome Students and Staff</h1>
+        <h3>Please Sign In</h3>
+        <form id="form">
+            <label for="username">Email: </label>
+            <input id="username" type="text" name="username" maxlength="50" required onkeypress="printPressed(event)" />
+            <lable for="password">Password: </lable>
+            <input id="password" type="password" name="password" minlength="8" required/>
+            <input type="submit" value="login"/>
+        </form>
+
+
+        <script src="events.js"></script>
+    </body>
+</html>
