@@ -1,0 +1,57 @@
+<div id="course-main">
+
+    <h1>Courses available at our school</h1>
+    <div id="course-container">
+        <!-- We have a better way of displaying these
+        <!-- Lets look at some string interpolation data binding
+        <div class="course">
+            <!-- We can use double curly braces to inject strings/variables 
+            <h2>{{courses[0].subject}}{{courses[0].number}}</h2>
+            <h3>{{courses[0].name}}</h3>
+            <p>Taught by: {{courses[0].teacher}}</p>
+        </div>
+        <div class="course">
+            <!-- We can use double curly braces to inject strings/variables 
+            <h2>{{courses[1].subject}}{{courses[1].number}}</h2>
+            <h3>{{courses[1].name}}</h3>
+            <p>Taught by: {{courses[1].teacher}}</p>
+        </div>
+        <div class="course">
+            <!-- We can use double curly braces to inject strings/variables 
+            <h2>{{courses[2].subject}}{{courses[2].number}}</h2>
+            <h3>{{courses[2].name}}</h3>
+            <p>Taught by: {{courses[2].teacher}}</p>
+        </div>
+        <div class="course">
+            <!-- We can use double curly braces to inject strings/variables 
+            <h2>{{courses[3].subject}}{{courses[3].number}}</h2>
+            <h3>{{courses[3].name}}</h3>
+            <p>Taught by: {{courses[3].teacher}}</p>
+        </div>
+        -->
+
+        <!-- Taking a look at structural directive nfFor
+        <div class="course" *ngFor="let course of courses">
+            <h2>{{course.subject}}{{course.number}}</h2>
+            <h3>{{course.name}}</h3>
+            <p>Taught by: {{course.teacher}}</p>
+        </div>
+        -->
+
+        <course *ngFor="let course of courses" [course]="course"></course>
+    </div>
+
+    <!-- Simple property and event binding -->
+
+    <!-- we use the (click) to register an event listener to listen for a click-->
+    <button [hidden]="!hide" (click)="showOrHideCourseForm()">Show or hide the form</button>
+    <new-course [hidden]="hide" (sendCourse)="getCourseFromNewCourse($event)" ></new-course>
+
+    <!-- we use the [hidden] to assign a variable value to the hidden attribute -->
+    <!--
+    <div [hidden]="hide">
+        <p>The embarrassing picture of spongebob at the Christmas party</p>
+    </div>
+    -->
+
+</div>

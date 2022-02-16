@@ -1,0 +1,19 @@
+<form id="new-course">
+    <div>
+        <label for="number">Course Number</label>
+        <!-- Inside of our form, we use [(ngModel)] to map the value of the input to the ts file var-->
+        <input [(ngModel)]="courseNum" id="number" name="number" type="number" required/>
+    </div>
+    <div>
+        <label for="name">Course Name</label>
+        <!-- Inside of our form, we use [(ngModel)] to map the value of the input to the ts file var-->
+        <input [(ngModel)]="courseName" id="name" name="name" type="text" required/>
+    </div>
+    <div>
+        <label for="subject">Course Subject</label>
+        <!-- Inside of our form, we use [(ngModel)] to map the value of the input to the ts file var-->
+        <input [(ngModel)]="courseSubject" id="subject" name="subject" type="text" required/>
+    </div>
+</form>
+
+<button (click)="onSubmit()">Submit new Course</button>

@@ -1,0 +1,15 @@
+.course {
+    margin: 50px;
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.selected {
+    border: solid 2px #39a2db;
+}
+
+.not-selected {
+    border: solid 2px lightgray;
+}
