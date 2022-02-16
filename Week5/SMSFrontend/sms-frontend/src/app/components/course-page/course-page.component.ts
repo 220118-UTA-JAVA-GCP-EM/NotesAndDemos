@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICourse } from 'src/app/Interfaces/ICourse';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'course-page',
@@ -8,38 +9,9 @@ import { ICourse } from 'src/app/Interfaces/ICourse';
 })
 export class CoursePageComponent implements OnInit {
 
-  hide:boolean = true;
+  courses:ICourse[] = [];
 
-  courses:ICourse[] = [
-    {
-      id: 1,
-      subject: "Art",
-      number: 120,
-      name: "Intro to Art",
-      teacher: "Bob Ross"
-    },
-    {
-      id: 2,
-      subject: "Reading",
-      number: 110,
-      name: "Intro to Reading",
-      teacher: "Veronica Vaughn"
-    },
-    {
-      id: 3,
-      subject: "Science",
-      number: 230,
-      name: "Intro to Science",
-      teacher: "Valerie Frizzle"
-    },
-    {
-      id: 4,
-      subject: "Music",
-      number: 230,
-      name: "Intro to Rock",
-      teacher: "Dewey Finn"
-    }
-  ];
+  hide:boolean = true;
 
   course: ICourse = {
     id: 0,
@@ -58,14 +30,22 @@ export class CoursePageComponent implements OnInit {
     console.log("called getCourseFromNewCourse");
     console.log($event);
     this.course = $event;
-    this.courses.push(this.course);
-    this.hide = !this.hide;
+    this.addCourse(this.course);
+    this.hide=!this.hide;
 
   }
 
-  constructor() { }
+  addCourse(course:ICourse): void {
+    this.courses = this.courseService.addCourse(course);
+  }
+
+  //We need to tell angular that we want to use the service in our component
+  //We do that with injection
+  constructor(private courseService:CourseService) { }
 
   ngOnInit(): void {
+    //We will use ngOnInit lifecycle method to grab the posts from our service, and display them
+    this.courses = this.courseService.getCourses();
   }
 
 }
