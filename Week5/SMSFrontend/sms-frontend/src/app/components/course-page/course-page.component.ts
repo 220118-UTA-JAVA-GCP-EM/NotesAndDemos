@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, ObservableInputTuple } from 'rxjs';
 import { ICourse } from 'src/app/Interfaces/ICourse';
 import { CourseService } from 'src/app/services/course.service';
 
@@ -9,16 +10,24 @@ import { CourseService } from 'src/app/services/course.service';
 })
 export class CoursePageComponent implements OnInit {
 
-  courses:ICourse[] = [];
+  courses:Observable<ICourse[]> = new Observable<ICourse[]>();
 
   hide:boolean = true;
+
 
   course: ICourse = {
     id: 0,
     number: 0,
     name: "",
     subject: "",
-    teacher: ""
+    teacher: {
+      email: "",
+      first: "",
+      last: "",
+      password: "",
+      personId: 0,
+      type: ""
+    }
   }
 
   showOrHideCourseForm(): void {
@@ -36,7 +45,7 @@ export class CoursePageComponent implements OnInit {
   }
 
   addCourse(course:ICourse): void {
-    this.courses = this.courseService.addCourse(course);
+    this.courseService.addCourse(course.number, course.name, course.subject);
   }
 
   //We need to tell angular that we want to use the service in our component
@@ -45,7 +54,8 @@ export class CoursePageComponent implements OnInit {
 
   ngOnInit(): void {
     //We will use ngOnInit lifecycle method to grab the posts from our service, and display them
-    this.courses = this.courseService.getCourses();
+    this.courseService.getCourses();
+    this.courses = this.courseService.subject;
   }
 
 }

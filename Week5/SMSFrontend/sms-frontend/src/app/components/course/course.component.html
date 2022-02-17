@@ -1,15 +1,15 @@
 <!-- We have seen ngFor, now lets take a lookm at ngIf and some Attribue Directives -->
 <div *ngIf="selected; else elseBlock">
     <div [ngClass]="['course', 'selected']" (click)="selectCourse()">
-        <h2>{{course.subject}}{{course.number}}</h2>
+        <h2>{{course.subject | uppercase}}{{course.number}}</h2>
         <h3>{{course.name}}</h3>
-        <p>Taught by: {{course.teacher}}</p>
+        <p>{{course.teacher | teacher}}</p>
     </div>
 </div>
 <ng-template #elseBlock>
     <div [ngClass]="['course', 'not-selected']" (click)="selectCourse()">
-        <h2>{{course.subject}}{{course.number}}</h2>
+        <h2>{{course.subject | uppercase}}{{course.number}}</h2>
         <h3>{{course.name}}</h3>
-        <p>Taught by: {{course.teacher}}</p>
+        <p>{{course.teacher | teacher}}</p>
     </div>
 </ng-template>

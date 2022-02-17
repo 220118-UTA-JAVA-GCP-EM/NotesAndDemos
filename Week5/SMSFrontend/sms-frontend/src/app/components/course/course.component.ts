@@ -13,7 +13,14 @@ export class CourseComponent implements OnInit {
     subject: "",
     number: 0,
     name: "",
-    teacher: ""
+    teacher: {
+      email: "",
+      first: "",
+      last: "",
+      password: "",
+      personId: 0,
+      type: ""
+    }
   };
 
   //We will use the selected var to play with the ngIf

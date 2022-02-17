@@ -38,7 +38,7 @@
         </div>
         -->
 
-        <course *ngFor="let course of courses" [course]="course"></course>
+        <course *ngFor="let course of (courses | async)" [course]="course"></course>
     </div>
 
     <!-- Simple property and event binding -->
