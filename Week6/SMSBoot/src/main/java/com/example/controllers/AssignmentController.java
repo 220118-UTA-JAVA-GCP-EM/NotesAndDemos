@@ -5,6 +5,8 @@ import com.example.models.Assignment;
 import com.example.models.Person;
 import com.example.services.AssignmentService;
 import com.example.services.PersonService;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -62,6 +64,5 @@ public class AssignmentController {
 
         return as.gradeAssignment(Double.parseDouble(body.get("grade")), a);
     }
-
 
 }

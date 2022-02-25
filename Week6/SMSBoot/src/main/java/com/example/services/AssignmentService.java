@@ -28,7 +28,9 @@ public class AssignmentService {
     public Assignment createNewAssignment(int id, Person s, Date due){
         Assignment a = new Assignment(id, s, 0.0, false, false, due);
 
-        return ar.save(a);
+        ar.save(a);
+
+        return a;
     }
 
     public List<Assignment> getStudentsAssignment(Person p){
