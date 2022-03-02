@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const {Music} = require('./music.js');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
+//Spotify auth token goes here
+const token = '';
 
 const mongoURI = 'mongodb+srv://revauser:p4ssw0rd@cluster0.flgkt.mongodb.net/musicdb?retryWrites=true&w=majority';
 
@@ -254,9 +256,11 @@ async function filterSongs(data){
 }
 
 async function loadData(data){
+    /*
     let numberOfLoaded = 0;
-    await mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
+    //await mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
+    
     for(let track of data){
         console.log('Processing: ', track);
         let song = new Music(track);
@@ -266,14 +270,14 @@ async function loadData(data){
     }
 
     mongoose.connection.close();
-
+    */
     const csvWriter = createCsvWriter({
         path: 'transformed.csv',
         header: [
             {id: 'trackName', title: 'trackName'},
             {id: 'artistName', title: 'artistName'},
             {id: 'album', title:'album'},
-            {id: 'duration', title: duration}
+            {id: 'duration', title: 'duration'}
         ]
     });
 
@@ -289,7 +293,7 @@ async function etlPipeline(){
     await loadData(transformedData);
 }
 
-//etlPipeline();
+etlPipeline();
 
 //Lets query our db and find out what the average length of a certain artists song is
 async function findAverageSongLength(artist){
@@ -323,4 +327,4 @@ async function findAverageSongLength(artist){
     console.log(`The average duration of ${artist}'s songs found in the database is: ${duration}`);
 }
 
-findAverageSongLength('Pink Guy');
+//findAverageSongLength('Pink Guy');
