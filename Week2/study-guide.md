@@ -1,0 +1,62 @@
+# Week 2 Study Guide 
+
+- What is a cloud based service?
+- What is the benefit of using a cloud based service?
+- What GCP service(s) are you familiar with?
+- What is a relational database?
+- What is an RDBMS?
+- What is SQL?
+- What is meant by SQL vendors?
+- What is a schema?
+- What are some of the common SQL data types in PostgreSQL?
+- What are some constraints that can be placed on a column in PostgreSQL?
+- What is an ERD?
+- What is meant by multiplicity? What are the different kinds of multiplicity relationships?
+- What is referential integrity?
+- What is a primary key?
+- What is a foreign key?
+- What is a composite key?
+- What is the serial data type?
+- What are the different sublanguages in SQL?
+    - What are the keywords associated with each sublanguage?
+- What is a transaction?
+- What are the properties of a transaction?
+- How would I write a simple SQL query?
+- What is the difference between a scalar function and an aggregate function?
+- What are some examples of scalar functions?
+- What are some examples of aggregate functions?
+- What is a join?
+- How would one write a join?
+- What are the different types of joins? When would you use each?
+- What is an alias?
+- What is the difference between WHERE and HAVING? GROUP BY and ORDER BY?
+- What is a subquery?
+- What are set operations?
+- What is the difference between UNION and UNION ALL?
+- What is a view?
+- What is an index?
+- What is a stored procedure? 
+- When should you place an index on a column? When might you not want to?
+- What is JDBC?
+- What is the workflow of executing a SQL statement with JDBC?
+- Explain the DAO design pattern.
+- What is SQL Injection? How do we prevent it using JDBC?
+- What is normalization?
+- What is denormalization?
+- What criteria must be met to satisfy each of the first three normal forms?
+- What is a web service?
+- Explain client/server communication.
+- What is HTTP?
+- What are the different parts of an HTTP request?
+- What are the different parts of an HTTP response?
+- What are the different status code ranges you can expect from an HTTP response? Some common status codes?
+- What are the different HTTP verbs? What is each used for?
+- What is REST?
+- What does it mean for a web service to be stateless?
+- What are the typical RESTful naming conventions?
+- What is Javalin?
+- How can you expose an API endpoint using Javalin?
+- What is a Javalin Handler?
+- How can we handle errors and exceptions with Javalin?
+- What is JSON?
+- What is Postman?
